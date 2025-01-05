@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.container {
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+header p {
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+.progress-container {
+  margin: 1rem 0;
+}
+
+.circular-progress {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 8px solid #4e4376;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+  position: relative;
+}
+
+#progress-count {
+  position: absolute;
+}
+
+.progress-bar {
+  background: #333;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+#progress-fill {
+  background: #6a89cc;
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.3s;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="time"] {
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  border: 2px solid #444;
+  border-radius: 5px;
+  background: #2b2b2b;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="time"]:focus {
+  border-color: #6a89cc;
+  outline: none;
+}
+
+.add-btn {
+  width: 50px;
+  height: 45px;
+  padding: 0.5rem;
+  border: none;
+  background: #6a89cc;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #82ccdd;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #2b2b2b;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.task-text {
+  flex-grow: 1;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.task-time {
+  width: 60px; /* Adjust width as needed */
+  text-align: right;
+  margin-right: 1rem;
+  margin-top: 4px;
+  color: #aaaaaa;
+  font-size: 0.9rem;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 10px; /* Adjust gap as needed */
+}
+
+li .edit-btn,
+li .delete-btn {
+  background: none;
+  border: none;
+  color: #bbbbbb;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+li .edit-btn:hover {
+  color: #2757c0;
+}
+li .delete-btn:hover {
+  color: rgb(219, 38, 38);
+}
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .circular-progress {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"],
+  input[type="time"],
+  .add-btn {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .circular-progress {
+    width: 50px;
+    height: 50px;
+    font-size: 0.9rem;
+    border-width: 6px;
+  }
+
+  form {
+    gap: 5px;
+  }
+
+  input[type="text"],
+  input[type="time"] {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .add-btn {
+    width: 150px;
+    height: 40px;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .task-text,
+  .task-time {
+    margin-right: 5px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 0.9rem;
+  }
+}
