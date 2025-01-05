@@ -1,4 +1,5 @@
 📋 Organize It
+
 Welcome to Organize It, a sleek and intuitive to-do list application designed to help you stay organized and productive. With its user-friendly interface and dynamic functionality, Organize It allows you to effortlessly manage your tasks and keep track of your daily schedule.
 
 ✨ Features
