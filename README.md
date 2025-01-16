@@ -18,4 +18,4 @@ Welcome to Organize It, a sleek and intuitive to-do list application designed to
 
 ## Live Demo 🚀
 
-Check out the live demo of the **Organize It** app here: (https://organiseit.vercel.app)
+Check out the live demo of the **Organize It** app here: (https://yash-organiseit.vercel.app)
